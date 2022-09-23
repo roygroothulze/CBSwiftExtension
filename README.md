@@ -1,3 +1,9 @@
 # CBExtension
+The package provides extensions to commonly used SwiftUI Code.
 
-A description of this package.
+## Author
+Package made by: [CodeBlock](www.codeblock.nl)
+
+## Availability
+This package is compatible with iOS 15.
+
