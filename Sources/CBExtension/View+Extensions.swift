@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-extension View {
+public extension View {
     
     // MARK: Align helpers
     func alignCenterHorizontally() -> some View {

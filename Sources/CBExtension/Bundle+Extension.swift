@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Bundle {
+public extension Bundle {
     var shortVersion: String {
         if let result = infoDictionary?["CFBundleShortVersionString"] as? String {
             return result

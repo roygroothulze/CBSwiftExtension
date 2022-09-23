@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-extension Image {
+public extension Image {
     init?(data: Data) {
         if let uiImage = UIImage(data: data) {
             self.init(uiImage: uiImage)
