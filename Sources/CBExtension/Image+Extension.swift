@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if os(iOS)
 @available(iOS 15.0, *)
 public extension Image {
     init?(data: Data) {
@@ -17,3 +18,4 @@ public extension Image {
         }
     }
 }
+#endif
