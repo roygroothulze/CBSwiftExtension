@@ -8,7 +8,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIDevice {
+public extension UIDevice {
     static var isIPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
     }

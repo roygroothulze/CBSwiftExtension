@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-extension Color {
+public extension Color {
     static let paleYellow   = Color(red: 252/255, green: 225/255, blue: 121/255)
     static let palePink     = Color(red: 254/255, green: 138/255, blue: 138/255)
     static let darkGreen    = Color(red: 0/255, green: 67/255, blue: 13/255)
