@@ -11,6 +11,20 @@ import SwiftUI
 @available(iOS 15.0, *)
 public extension View {
     
+    /// Applies the given transform if the given condition evaluates to `true`.
+    /// - Parameters:
+    ///   - condition: The condition to evaluate.
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
+    @ViewBuilder
+    func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+    
     // MARK: Align helpers
     func alignCenterHorizontally() -> some View {
         HStack {
@@ -73,4 +87,33 @@ public extension View {
     func hidden(_ shouldHide: Bool) -> some View {
         opacity(shouldHide ? 0 : 1)
     }
+    
+    func squire(size: CGFloat, alignment: Alignment = .center) -> some View {
+        self
+            .frame(width: size, height: size, alignment: alignment)
+    }
+    
+    #if os(iOS)
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+    #endif
 }
+
+
+#if os(iOS)
+@available(iOS 15, *)
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        return Path(path.cgPath)
+    }
+}
+#endif
