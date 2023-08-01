@@ -9,6 +9,7 @@ import SwiftUI
 
 @available(macOS 12, *)
 @available(iOS 15.0, *)
+@available(watchOS 8.0, *)
 public extension View {
     
     /// Applies the given transform if the given condition evaluates to `true`.
@@ -72,6 +73,7 @@ public extension View {
     
     
     // MARK: Toolbar helpers
+    @available(watchOS 8.0, *)
     func addCancelToToolBar(presentationMode: Binding<PresentationMode>, title: String = "Cancel") -> some View {
         self
             .toolbar {

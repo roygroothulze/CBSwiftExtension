@@ -5,7 +5,7 @@
 //  Created by Roy Groot Hulze on 01/08/2023.
 //
 
-#if canImport(UIKit)
+#if os(iOS)
 import UIKit
 
 public extension UIDevice {

@@ -9,6 +9,7 @@ import SwiftUI
 
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
+@available(watchOS 8.0, *)
 public extension Color {
     static let paleYellow   = Color(red: 252/255, green: 225/255, blue: 121/255)
     static let palePink     = Color(red: 254/255, green: 138/255, blue: 138/255)
@@ -21,7 +22,7 @@ public extension Color {
     static let paleRed      = Color(red: 174/255, green: 80/255, blue: 80/255)
     static let paleBrown    = Color(red: 124/255, green: 102/255, blue: 85/255)
     
-    #if canImport(UIKit)
+    #if os(iOS)
     static let lightText = Color(UIColor.lightText)
     static let darkText = Color(UIColor.darkText)
 

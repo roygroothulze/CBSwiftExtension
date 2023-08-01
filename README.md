@@ -52,5 +52,5 @@ The package provides extensions to commonly used SwiftUI Code.
 Package made by: [CodeBlock](www.codeblock.nl)
 
 ## Availability
-This package is compatible with iOS 15 and MacOS 12
+This package is compatible with iOS 15 MacOS 12 and WatchOS 8
 

@@ -9,6 +9,7 @@ import Foundation
 
 @available(macOS 12.0, *)
 @available(iOS 15.0, *)
+@available(watchOS 8.0, *)
 public extension Date {
     var weekdayDisplayFormat: String {
         self.formatted(.dateTime.weekday(.wide))
