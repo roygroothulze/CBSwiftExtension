@@ -11,9 +11,12 @@ import Foundation
 @available(iOS 15.0, *)
 @available(watchOS 8.0, *)
 public extension Date {
+    @available(tvOS 53.0, *)
     var weekdayDisplayFormat: String {
         self.formatted(.dateTime.weekday(.wide))
     }
+    
+    @available(tvOS 15.0, *)
     var dayDisplayFormat: String {
         self.formatted(.dateTime.day())
     }

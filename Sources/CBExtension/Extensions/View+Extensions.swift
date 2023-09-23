@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(tvOS 13.0, *)
 @available(macOS 12, *)
 @available(iOS 15.0, *)
 @available(watchOS 8.0, *)
@@ -74,6 +75,7 @@ public extension View {
     
     // MARK: Toolbar helpers
     @available(watchOS 8.0, *)
+    @available(tvOS 15.0, *)
     func addCancelToToolBar(presentationMode: Binding<PresentationMode>, title: String = "Cancel") -> some View {
         self
             .toolbar {
