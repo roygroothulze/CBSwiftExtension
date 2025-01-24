@@ -49,7 +49,7 @@ The package provides extensions to commonly used SwiftUI Code.
 - squire(size: CGFloat, alignment: Alignment = .center) -> some View (iOS only)
 
 ## Author
-Package made by: [CodeBlock](www.codeblock.nl)
+Package made by: [CodeBlock](https://codeblock.nl)
 
 ## Availability
 This package is compatible with iOS 15 MacOS 12 and WatchOS 8
